@@ -13,7 +13,6 @@ describe('Validade Cpf', () => {
 
   test('when cpf is not valid then return false', () => {
     const cpf = '771.393.720-04';
-
     const cpfValidator = new CpfValidator()
     const isValid = cpfValidator.isCpfvalid(cpf);
 
