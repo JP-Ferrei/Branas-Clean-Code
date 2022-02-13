@@ -3,8 +3,7 @@ import {CpfValidator} from './CpfValidator';
 describe('Validade Cpf', () => {
 
   test('when cpf is valid then return true', () => {
-    // const cpf = '771.393.720-04';
-    const cpf = '152.129.937-41';
+    const cpf = '771.393.720-04';
     const cpfValidator = new CpfValidator();
     const isValid = cpfValidator.isCpfvalid(cpf);
 
