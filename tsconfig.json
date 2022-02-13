@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+  "incremental": true,
+  "target": "es6",
+  "module": "commonjs",
+  "outDir": "./dist",
+  "strict": true, // depende do seu nível de conhecimento em TypeScript, recomendo começar com false
+  "esModuleInterop": true,
+  "lib": [
+    "es5", "es6", "dom", "dom.iterable"
+  ]
+  },
+  "include": [
+      "./src"
+  ],
+  "exclude": [
+      "./node_modules"
+  ]
+}
