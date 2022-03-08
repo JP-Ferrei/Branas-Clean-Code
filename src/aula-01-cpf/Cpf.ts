@@ -1,4 +1,10 @@
-export class CpfValidator {
+export default class Cpf {
+
+	constructor(readonly value: string ){	
+		this.isCpfvalid(value) ? this.value = value : () => {throw new Error("cpf isn't valid")};
+		
+	}
+
 	public isCpfvalid(cpf: string): boolean {
 		if (cpf === null || cpf === undefined) return false;
 		if (cpf.length < 11 || cpf.length > 14) return false;
@@ -40,7 +46,7 @@ export class CpfValidator {
 	}
 }
 
-interface cpfObject {
+export interface cpfObject {
 	number: string;
 	digit: number;
 	cpfUnified: string;

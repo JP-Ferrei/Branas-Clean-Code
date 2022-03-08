@@ -1,21 +1,18 @@
-import {CpfValidator} from './CpfValidator';
+import Cpf from './Cpf';
 
 describe('Validade Cpf', () => {
 
-  test('when cpf is valid then return true', () => {
-    const cpf = '771.393.720-04';
-    const cpfValidator = new CpfValidator();
-    const isValid = cpfValidator.isCpfvalid(cpf);
-
-    expect(isValid).toBe(true);
+  test('when cpf is valid then assign to cpf field', () => {
+    const cpfInput = '771.393.720-04';
+    const cpf = new Cpf(cpfInput);
+    expect(cpf.value).toBe('771.393.720-04');
   });
 
 
-  test('when cpf is not valid then return false', () => {
-    const cpf = '771.393.720-04';
-    const cpfValidator = new CpfValidator()
-    const isValid = cpfValidator.isCpfvalid(cpf);
+  test('when cpf is not valid then thow error', () => {
+    const value = '771.393.290-04';
+    const cpf = new Cpf(value);
 
-    expect(isValid).toBe(true);
+    expect(cpf).toThrowError();
   });
 });
