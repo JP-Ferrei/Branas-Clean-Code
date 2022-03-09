@@ -4,9 +4,9 @@
   "description": "branas`s clean code cours",
   "main": "index.js",
   "scripts": {
-    "tsc:init": "tsc --init",
-    "build": "tsc",
-    "test": "tsc && jest dist/"
+    "test": "jest --verbose --maxWorkrs=50%",
+    "test-watch": "jest --watch-all --maxWorkrs=25%",
+    "coverage": "jest --coverage"
   },
   "author": "",
   "license": "ISC",
